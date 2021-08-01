@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/adList">
+
+    <fragment
+        android:id="@+id/adList"
+        android:name="com.app.blog.ui.list.view.UpdatedAdList"
+        android:label="fragment_list">
+        <action
+            android:id="@+id/action_showDetail"
+            app:destination="@id/adDetail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/adDetail"
+        android:name="com.app.blog.ui.component.updated_detail.UpdatedAdDetail"
+        android:label="fragment_detail">
+
+        <argument
+            android:name="selectedAd"
+            app:argType="com.app.classify.model.Results" />
+        <action
+            android:id="@+id/action_adDetail_to_adList"
+            app:destination="@id/adList"
+            app:popUpTo="@id/adList" />
+    </fragment>
+</navigation>

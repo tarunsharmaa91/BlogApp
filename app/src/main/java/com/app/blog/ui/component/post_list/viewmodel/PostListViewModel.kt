@@ -1,11 +1,10 @@
-package com.app.blog.ui.component.updated_list.viewmodel
+package com.app.blog.ui.component.post_list.viewmodel
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.app.blog.model.ClassifyAd
 import com.app.blog.model.Results
 import com.app.blog.network.ApiService
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,9 +28,9 @@ class UpdatedAdListViewModel @Inject constructor(apiService: ApiService) : ViewM
 
     //For result
 
-    private val _results = MutableLiveData<ClassifyAd>()
+    private val _results = MutableLiveData<List<Results>>()
 
-    val result: LiveData<ClassifyAd>
+    val result: LiveData<List<Results>>
         get() = _results
 
     //For navigation
@@ -46,7 +45,7 @@ class UpdatedAdListViewModel @Inject constructor(apiService: ApiService) : ViewM
             _status.value = ApiStatus.LOADING
             try {
                 //_results.value = AdsApi.retrofitService.getAds()
-                _results.value = apiService.getAds()
+                _results.value = apiService.getPosts()
                 _status.value = ApiStatus.COMPLETED
             } catch (ex: Exception) {
                 _status.value = ApiStatus.ERROR

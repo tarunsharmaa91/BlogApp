@@ -8,12 +8,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.app.blog.databinding.UpdatedAdListFragmentBinding
-import com.app.blog.ui.component.updated_list.adapter.AdListAdapter
-import com.app.blog.ui.component.updated_list.viewmodel.UpdatedAdListViewModel
+import com.app.blog.ui.component.post_list.adapter.PostListAdapter
+import com.app.blog.ui.component.post_list.viewmodel.UpdatedAdListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class UpdatedAdList : Fragment() {
+class PostList : Fragment() {
 
     private val viewModel: UpdatedAdListViewModel by viewModels()
 
@@ -30,7 +30,7 @@ class UpdatedAdList : Fragment() {
         //Now I have to give binding access to AdListViewModel
         binding.viewModel = viewModel
 
-        binding.adList.adapter = AdListAdapter(AdListAdapter.OnClickListener {
+        binding.adList.adapter = PostListAdapter(PostListAdapter.OnClickListener {
             viewModel.displayAdDetail(it)
         })
 
@@ -39,7 +39,7 @@ class UpdatedAdList : Fragment() {
                 // Must find the NavController from the Fragment
 
                 //Wen you have function literal with one parameter
-                this.findNavController().navigate(UpdatedAdListDirections.actionShowDetail(it))
+                this.findNavController().navigate(PostListDirections.actionShowDetail(it))
                 // Tell the ViewModel we've made the navigate call to prevent multiple navigation
                 viewModel.displayAdDetailComplete()
             }

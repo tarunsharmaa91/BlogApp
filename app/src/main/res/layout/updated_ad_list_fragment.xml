@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.app.blog.ui.component.updated_list.viewmodel.UpdatedAdListViewModel" />
+            type="com.app.blog.ui.component.post_list.viewmodel.UpdatedAdListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,7 +18,7 @@
             android:layout_height="0dp"
             android:clipToPadding="false"
             android:padding="6dp"
-            app:listData="@{viewModel.result.results}"
+            app:listData="@{viewModel.result}"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"

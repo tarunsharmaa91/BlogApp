@@ -1,4 +1,4 @@
-package com.app.blog.ui.component.updated_list.adapter
+package com.app.blog.ui.component.post_list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,10 +6,10 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.app.blog.databinding.ViewItemBinding
-import com.app.blog.ui.component.updated_list.adapter.AdListAdapter.ListViewHolder
+import com.app.blog.ui.component.post_list.adapter.PostListAdapter.ListViewHolder
 import com.app.blog.model.Results
 
-class AdListAdapter(private val onClickListener: OnClickListener) :
+class PostListAdapter(private val onClickListener: OnClickListener) :
     ListAdapter<Results, ListViewHolder>(DiffCallback) {
 
     class ListViewHolder(private var binding: ViewItemBinding) :
@@ -28,7 +28,7 @@ class AdListAdapter(private val onClickListener: OnClickListener) :
         }
 
         override fun areContentsTheSame(oldItem: Results, newItem: Results): Boolean {
-            return oldItem.uid == newItem.uid
+            return oldItem.id == newItem.id
         }
     }
 

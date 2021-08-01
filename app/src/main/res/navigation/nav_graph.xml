@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/adList"
-        android:name="com.app.blog.ui.list.view.UpdatedAdList"
+        android:name="com.app.blog.ui.list.view.PostList"
         android:label="fragment_list">
         <action
             android:id="@+id/action_showDetail"
@@ -15,12 +15,12 @@
 
     <fragment
         android:id="@+id/adDetail"
-        android:name="com.app.blog.ui.component.updated_detail.UpdatedAdDetail"
+        android:name="com.app.blog.ui.component.post_detail.PostDetail"
         android:label="fragment_detail">
 
         <argument
             android:name="selectedAd"
-            app:argType="com.app.classify.model.Results" />
+            app:argType="com.app.blog.model.Results" />
         <action
             android:id="@+id/action_adDetail_to_adList"
             app:destination="@id/adList"

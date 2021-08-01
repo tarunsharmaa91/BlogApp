@@ -9,20 +9,9 @@
             type="com.app.blog.model.Results" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="170dp"
-            android:adjustViewBounds="true"
-            android:padding="2dp"
-            android:scaleType="centerCrop"
-            app:imageUrl="@{listing.image_urls_thumbnails.get(0)}"
-            app:layout_constraintBottom_toBottomOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -33,14 +22,11 @@
             android:paddingEnd="10sp"
             android:textColor="@color/white"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.836"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toTopOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.107"
-            app:text="@{listing.name}" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            app:text="@{listing.title}" />
+    </RelativeLayout>
 
 
 </layout>

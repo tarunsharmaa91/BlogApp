@@ -1,4 +1,4 @@
-package com.app.blog.ui.component.updated_detail
+package com.app.blog.ui.component.post_detail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.app.blog.databinding.UpdatedAdDetailFragmentBinding
 import com.app.blog.utils.AppUtils
 
-class UpdatedAdDetail : Fragment() {
+class PostDetail : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,11 +23,11 @@ class UpdatedAdDetail : Fragment() {
         binding.lifecycleOwner = this
         binding.fragment = this
 
-        val adData = UpdatedAdDetailArgs.fromBundle(requireArguments()).selectedAd
-        val viewModelFactory = UpdatedDetailViewModelFactory(adData, application)
+        val adData = PostDetailArgs.fromBundle(requireArguments()).selectedAd
+        val viewModelFactory = PostDetailViewModelFactory(adData, application)
         binding.viewModel = ViewModelProvider(
             this, viewModelFactory
-        ).get(UpdatedAdDetailViewModel::class.java)
+        ).get(PostDetailViewModel::class.java)
         binding.utils = AppUtils()
         return binding.root
     }

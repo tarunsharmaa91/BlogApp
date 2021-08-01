@@ -6,14 +6,14 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.app.blog.model.Results
-import com.app.blog.ui.component.updated_list.adapter.AdListAdapter
-import com.app.blog.ui.component.updated_list.viewmodel.ApiStatus
+import com.app.blog.ui.component.post_list.adapter.PostListAdapter
+import com.app.blog.ui.component.post_list.viewmodel.ApiStatus
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
 @BindingAdapter("listData")
 fun bindRecyclerView(recyclerView: RecyclerView, data: List<Results>?) {
-    val adapter = recyclerView.adapter as AdListAdapter
+    val adapter = recyclerView.adapter as PostListAdapter
     adapter.submitList(data)
 }
 

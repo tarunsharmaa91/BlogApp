@@ -4,25 +4,27 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.VisibleForTesting
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.app.blog.databinding.UpdatedAdListFragmentBinding
+import com.app.blog.databinding.PostListFragmentBinding
 import com.app.blog.ui.component.post_list.adapter.PostListAdapter
-import com.app.blog.ui.component.post_list.viewmodel.UpdatedAdListViewModel
+import com.app.blog.ui.component.post_list.viewmodel.PostListViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class PostList : Fragment() {
 
-    private val viewModel: UpdatedAdListViewModel by viewModels()
+    @VisibleForTesting
+    val viewModel: PostListViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        val binding = UpdatedAdListFragmentBinding.inflate(inflater)
+        val binding = PostListFragmentBinding.inflate(inflater)
 
         //To allow data binding to observe live data with life cycle of fragment
         binding.lifecycleOwner = this

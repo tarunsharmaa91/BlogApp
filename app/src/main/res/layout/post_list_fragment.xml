@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.app.blog.ui.component.post_list.viewmodel.UpdatedAdListViewModel" />
+            type="com.app.blog.ui.component.post_list.viewmodel.PostListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

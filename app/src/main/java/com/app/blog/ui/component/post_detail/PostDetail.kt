@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.app.blog.databinding.UpdatedAdDetailFragmentBinding
+import com.app.blog.databinding.PostDetailFragmentBinding
 import com.app.blog.utils.AppUtils
 
 class PostDetail : Fragment() {
@@ -17,7 +17,7 @@ class PostDetail : Fragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        val binding = UpdatedAdDetailFragmentBinding.inflate(inflater)
+        val binding = PostDetailFragmentBinding.inflate(inflater)
         val application = requireNotNull(activity).application
         //To allow data binding to observe live data with life cycle of fragment
         binding.lifecycleOwner = this

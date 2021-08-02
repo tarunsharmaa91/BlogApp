@@ -18,7 +18,7 @@ enum class ApiStatus {
 }
 
 @HiltViewModel
-class UpdatedAdListViewModel @Inject constructor(apiService: ApiService) : ViewModel() {
+class PostListViewModel @Inject constructor(apiService: ApiService) : ViewModel() {
     //This is to store the current request status (Internal)
     private val _status = MutableLiveData<ApiStatus>()
 
@@ -44,7 +44,6 @@ class UpdatedAdListViewModel @Inject constructor(apiService: ApiService) : ViewM
         viewModelScope.launch {
             _status.value = ApiStatus.LOADING
             try {
-                //_results.value = AdsApi.retrofitService.getAds()
                 _results.value = apiService.getPosts()
                 _status.value = ApiStatus.COMPLETED
             } catch (ex: Exception) {

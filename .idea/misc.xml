@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.234375" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/post_detail_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/post_list_fragment.xml" value="0.36666666666666664" />
         <entry key="app/src/main/res/layout/updated_ad_detail_fragment.xml" value="0.2796875" />
         <entry key="app/src/main/res/layout/updated_ad_list_fragment.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/view_item.xml" value="0.2796875" />
+        <entry key="app/src/main/res/layout/view_comment_item.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/view_item.xml" value="0.1" />
       </map>
     </option>
   </component>

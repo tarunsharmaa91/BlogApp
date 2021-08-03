@@ -1,52 +1,51 @@
-package com.app.blog.model;
+package com.app.blog.model
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
+import org.junit.Assert
+import org.junit.Before
+import org.junit.Test
+import org.mockito.Mock
+import org.mockito.Mockito
+import org.mockito.MockitoAnnotations
 
-public class ResultsTest {
-
-    private final String created_at = "2019-02-24 04:04:17.566515";
-    private final String price = "AED 5";
-    private final String name = "Notebook";
-    private final String uid = "4878bf592579410fba52941d00b62f94";
+class ResultsTest {
+    private val id = 15
+    private val body = "body text"
+    private val name = "post title"
+    private val uid = 78624
 
     @Mock
-    Results results;
+    var results: Results? = null
 
     @Before
-    public void setUp() throws Exception {
-        MockitoAnnotations.initMocks(this);
-        Mockito.when(results.getCreated_at()).thenReturn(created_at);
-        Mockito.when(results.getPrice()).thenReturn(price);
-        Mockito.when(results.getName()).thenReturn(name);
-        Mockito.when(results.getUid()).thenReturn(uid);
+    fun setUp() {
+        MockitoAnnotations.initMocks(this)
+        Mockito.`when`(results!!.id).thenReturn(id)
+        Mockito.`when`(results!!.body).thenReturn(body)
+        Mockito.`when`(results!!.title).thenReturn(name)
+        Mockito.`when`(results!!.userId).thenReturn(uid)
     }
 
     @Test
-    public void testName() {
-        Mockito.when(results.getName()).thenReturn(name);
-        Assert.assertEquals("Notebook", results.getName());
+    fun testName() {
+        Mockito.`when`(results!!.title).thenReturn(name)
+        Assert.assertEquals("post title", results!!.title)
     }
 
     @Test
-    public void testPrice() {
-        Mockito.when(results.getPrice()).thenReturn(price);
-        Assert.assertEquals("AED 5", results.getPrice());
+    fun testBody() {
+        Mockito.`when`(results!!.body).thenReturn(body)
+        Assert.assertEquals("body text", results!!.body)
     }
 
     @Test
-    public void testUid() {
-        Mockito.when(results.getUid()).thenReturn(uid);
-        Assert.assertEquals("4878bf592579410fba52941d00b62f94", results.getUid());
+    fun testUserId() {
+        Mockito.`when`(results!!.userId).thenReturn(uid)
+        Assert.assertEquals(78624, results!!.userId.toLong())
     }
 
     @Test
-    public void testCreatedAt() {
-        Mockito.when(results.getCreated_at()).thenReturn(created_at);
-        Assert.assertEquals("2019-02-24 04:04:17.566515", results.getCreated_at());
+    fun testId() {
+        Mockito.`when`(results!!.id).thenReturn(id)
+        Assert.assertEquals(15, results!!.id.toLong())
     }
 }

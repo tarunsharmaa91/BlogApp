@@ -1,6 +1,4 @@
 
-e
-5app/src/test/java/com/app/blog/APIAvailabilityTest.kt,8/d/8dfec3e98efcfbee4c306c8f5c1c339d81a2b64b
 @
 local.properties,0/7/0712df971a99ac4d2fccb8e0fb19f377f3374cca
 ?
@@ -11,19 +9,5 @@ F
 app/proguard-rules.pro,9/e/9e08934d811afe28fbc77aaa3c0d747b94348db9
 X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
-@
-app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
-P
- app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
-^
-.app/src/main/java/com/app/blog/di/AppModule.kt,e/1/e1ccd973a87188ef7bf772c9eb2f02fefd139b85
-d
-4app/src/main/java/com/app/blog/network/ApiService.kt,a/2/a27bc012f036e8433991bc35f9359a38ddc7f4b2
-f
-6app/src/main/java/com/app/blog/ui/base/BaseActivity.kt,e/7/e79a49a9a037c66610210cad53ccbfc3189a38be
-€
-Papp/src/main/java/com/app/blog/ui/component/post_list/adapter/PostListAdapter.kt,1/2/12091e61bbfe3baecd0bb4115d9365ff2cf5fa6d
-€
-Papp/src/main/java/com/app/blog/ui/component/post_list/repository/PostListRepo.kt,c/2/c27d2f5e1843a91fd73880d06b49fbdcede67ed3

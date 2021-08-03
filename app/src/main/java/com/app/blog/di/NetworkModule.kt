@@ -7,13 +7,14 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule {
+object NetworkModule {
 
     @Provides
     @Singleton
@@ -27,5 +28,15 @@ object AppModule {
             addConverterFactory(MoshiConverterFactory.create(moshi))
             build()
         }.create(ApiService::class.java)
+
+    /*@Provides
+    @Singleton
+    fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit{
+        return Retrofit.Builder().client(okHttpClient)
+            .baseUrl(ApiService.BASE_URL)
+            .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory.create())
+            .build()
+    }*/
 
 }

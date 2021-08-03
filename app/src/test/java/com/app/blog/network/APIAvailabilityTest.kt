@@ -1,4 +1,4 @@
-package com.app.blog
+package com.app.blog.network
 
 import org.junit.Test
 import java.io.BufferedReader
@@ -11,7 +11,7 @@ class APIAvailabilityTest {
     @Throws(Exception::class)
     fun testAvailability() {
         val connection =
-            URL("https://ey3f2y0nre.execute-api.us-east-1.amazonaws.com/default/dynamodb-writer").openConnection()
+            URL("https://jsonplaceholder.typicode.com/posts").openConnection()
         val response = connection.getInputStream()
         val buffer = StringBuffer()
         BufferedReader(InputStreamReader(response, Charset.defaultCharset())).use { reader ->

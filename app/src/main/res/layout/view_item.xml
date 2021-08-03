@@ -9,24 +9,39 @@
             type="com.app.blog.model.Results" />
     </data>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20sp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="10dp"
             android:background="@color/purple_700"
-            android:gravity="center"
-            android:paddingStart="10sp"
-            android:paddingEnd="10sp"
             android:textColor="@color/white"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.836"
             app:layout_constraintVertical_bias="0.107"
-            app:text="@{listing.title}" />
-    </RelativeLayout>
+            app:text="@{`Title `+ listing.title}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:background="@color/teal_700"
+            android:textSize="16sp"
+            android:maxLines="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.836"
+            app:layout_constraintVertical_bias="0.107"
+            app:text="@{`Body `+listing.body}" />
+    </LinearLayout>
 
 
 </layout>

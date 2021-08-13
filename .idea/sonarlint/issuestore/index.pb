@@ -11,3 +11,35 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f/b/fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 <
 build.gradle,f/0/f07866736216be0ee2aba49e392191aeae700a35
+f
+6app/src/main/java/com/app/blog/ui/base/BaseActivity.kt,e/7/e79a49a9a037c66610210cad53ccbfc3189a38be
+P
+ app/src/main/AndroidManifest.xml,8/c/8c55c3ccc257e5907959013f99656e4c8ec3903e
+Y
+)app/src/main/java/com/app/blog/BlogApp.kt,b/6/b6d2fa57a4992502424f198c4d4bf247d5697385
+^
+.app/src/main/java/com/app/blog/MainActivity.kt,d/f/dfab6a764636bd41d83ca7025c94e12656e6b91f
+d
+4app/src/main/java/com/app/blog/network/ApiService.kt,a/2/a27bc012f036e8433991bc35f9359a38ddc7f4b2
+i
+9app/src/main/java/com/app/blog/binding/BindingAdapters.kt,7/c/7c53c73f68dca530e23a11d097cc567def3a7905
+@
+app/build.gradle,f/4/f4a01d6a4fcb971362ec00a83903fd3902f52164
+…
+Uapp/src/main/java/com/app/blog/ui/component/post_detail/adapter/CommentListAdapter.kt,2/2/22e3a1207033768f9cab7d12441c503d8223b2b3
+`
+0app/src/main/java/com/app/blog/model/Comments.kt,e/9/e9ba22ffb3c129253c2139a8290eef0be94127d7
+d
+4app/src/test/java/com/app/blog/model/CommentsTest.kt,4/2/42bafe88f17531294a4b58ce3039fa3b9b328ab6
+b
+2app/src/main/java/com/app/blog/di/NetworkModule.kt,d/1/d1a5c08f053448b92479e523d7716a7c227f558d
+o
+?app/src/main/java/com/app/blog/repository/PostListRepository.kt,e/1/e1cb40fed9bccb7066a0fa345981114330d0d4fd
+g
+7app/src/main/java/com/app/blog/repository/Repository.kt,1/9/1932f36c93de6d1d1e1e1bb38e61604a4296d33e
+c
+3app/src/test/java/com/app/blog/model/ResultsTest.kt,3/4/34b55283fdcae4360f4284e4a250381e65b3dad4
+m
+=app/src/test/java/com/app/blog/network/APIAvailabilityTest.kt,7/4/7498eb48c8c9dd3e4ed98ba311083d267dd780dc
+_
+/app/src/main/java/com/app/blog/model/Results.kt,7/9/7968d76ae3fdb82cbcf20a142af64c37a511e2b2

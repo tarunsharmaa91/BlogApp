@@ -15,6 +15,12 @@ class PostDetailViewModel constructor(
 ) :
     ViewModel() {
 
+    private val _selectedAdDetail = MutableLiveData<Results>()
+
+    // The external LiveData for the SelectedProperty
+    val selectedProperty: LiveData<Results>
+        get() = _selectedAdDetail
+
     private val _comments = MutableLiveData<List<Comments>>()
 
     // The external LiveData for the SelectedProperty
@@ -23,6 +29,7 @@ class PostDetailViewModel constructor(
 
     // Initialize the _selectedProperty MutableLiveData
     init {
+        _selectedAdDetail.value = ad
         viewModelScope.launch {
             try {
                 _comments.value = apiService.getComments(ad.id)
